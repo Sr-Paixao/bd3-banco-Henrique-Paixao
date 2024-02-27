@@ -47,9 +47,10 @@ cod_agenda INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 cod_paciente INT UNSIGNED NOT NULL,
 cod_medico INT UNSIGNED NOT NULL,
 cod_sala INT UNSIGNED NOT NULL,
-data_cirurgia DATETIME,
+data_cirurgia date,
 status_cirurgia ENUM ('AGENDADO','CONCLUIDO','CANCELADO')
 );
+
 
 
 
