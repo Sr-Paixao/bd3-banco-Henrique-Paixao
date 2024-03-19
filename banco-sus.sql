@@ -19,6 +19,18 @@ telefone_responsavel VARCHAR(11),
 celular_responsavel VARCHAR(11) NOT NULL
 );
 
+create table tbl_paciente_bkp(
+cod_paciente INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nome_paciente VARCHAR(100) NOT NULL,
+telefone_paciente VARCHAR(10),
+celular_paciente VARCHAR(11) NOT NULL,
+email_paciente VARCHAR(100) NOT NULL,
+nome_responsavel VARCHAR(500) NOT NULL,
+telefone_responsavel VARCHAR(11),
+celular_responsavel VARCHAR(11) NOT NULL,
+date_delete datetime not null
+);
+
 
 create table tbl_medico(
 cod_medico INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -51,6 +63,12 @@ data_cirurgia date,
 status_cirurgia ENUM ('AGENDADO','CONCLUIDO','CANCELADO')
 );
 
+describe tbl_paciente;
+describe tbl_paciente_bkp;
 
+delete from tbl_paciente where cod_paciente =2;
+
+select * from tbl_paciente;
+select * from tbl_paciente_bkp;
 
 

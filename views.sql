@@ -49,3 +49,5 @@ select * from agenda_aula;
 drop view listagem_medico_especialidade_aula;
 drop view listagem_sala_especialidade_aula;
 drop view agenda_aula;
+
+
